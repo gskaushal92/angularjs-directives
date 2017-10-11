@@ -1,0 +1,27 @@
+{
+  "name": "angularjs-directives",
+  "description": "directives",
+  "main": "index.js",
+  "authors": [
+    "Gopal"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "directives"
+  ],
+  "homepage": "https://github.com/gskaushal92/angularjs-directives",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.6",
+    "angular-route": "^1.6.6",
+    "bootstrap": "^3.3.7"
+  }
+}
