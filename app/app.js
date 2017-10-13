@@ -1,4 +1,4 @@
-angular.module('inputDropdown',['ngRoute'])
+angular.module('myApp',['ngRoute','inputDropdown'])
 
 .config(function(  $locationProvider,$routeProvider) {
     $locationProvider.hashPrefix('!')
@@ -23,28 +23,3 @@ angular.module('inputDropdown',['ngRoute'])
       }
     }
 }])
-.directive('showHideList', function () {
-    return {
-      scope:{
-        countries:'=',
-        country:'='
-      },
-      template:'<div  ng-mouseenter="mouseeneter()" ng-mouseleave="mouseleave()"><input type="text" id="country" name="country" ng-model="country">'+
-                '<div ng-show="listShow"><ul ng-repeat="cntry in countries | filter:country">'+
-                  '<li class="country" ng-click="select(cntry)">{{cntry}}</li>'+
-                '</ul></div></div>',
-      controller:function ($scope, $element) {
-        $scope.listShow= false;
-        $scope.mouseeneter =function(){
-          $scope.listShow=true;
-        }
-        $scope.mouseleave=function(){
-          $scope.listShow=false;
-        }
-        $scope.select=function(cntry){
-          $scope.country=cntry
-          $scope.listShow=false;
-        }
-      }
-    };
-});
